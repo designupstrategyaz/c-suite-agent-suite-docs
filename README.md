@@ -4,35 +4,35 @@
 
 Eleven executive seats plus a Studio OS router for agencies, B2B SaaS and consulting firms. Each job drafts one artefact from a local file board, such as a 13-week cash forecast or a proposal kit. No script sends, pays or signs. Ships with a kill switch, a human queue and a 105-eval test gate.
 
-This repository is the public documentation: what the pack does, real sample outputs, the FAQ and the limits. The skill pack itself (12 skills, scripts, example board) is sold on Agensi and is not in this repository.
+This repository is the public documentation: what the pack does, real sample outputs, the FAQ and the limits. The skill pack itself (12 skills, scripts, example board) is sold as a one-time download on Gumroad and is not in this repository.
 
 - **Demo video (63 s, real runs):** https://youtu.be/domzW8sVSCQ
 - **Full session, seven seats on one Monday:** [docs/monday-session.md](docs/monday-session.md)
-- **Agensi listing:** the link is added here when the listing goes live.
+- **Buy (Gumroad, $50 one-time):** the link is added here when the product goes live.
 
 ## What it does
 
-C-Suite Agent Suite is a studio operating system for digital agencies, B2B SaaS startups and boutique consulting firms. It packs 11 executive seats, from CEO and CFO to CLO, plus a Studio OS router, as 12 skills that cover jobs a founder already does each week. An agent loads the router first, picks one seat and runs one named job, such as a 13-week cash forecast or a proposal kit. Each job ends in a draft artefact on a local file board. Cafés, contractors and storefronts fit a secondary lane that drafts deposits, change orders, estimates and CPM schedules.
+C-Suite Agent Suite is a studio operating system for the buyer's own machine. It packs 11 executive seats, from CEO and CFO to CLO, plus a Studio OS router, as 12 skills for digital agencies, B2B SaaS startups and boutique consulting firms. An agency owner, a SaaS founder or an independent consultant asks for one named job, and the router hands it to one seat. Each job ends in a draft artefact on a local file board, never in a sent email or a moved payment. Cafés, contractors and storefronts fit a secondary lane that drafts deposits, change orders, estimates and CPM schedules.
+
+### One Monday on the example board
+
+One Monday on the example board shows the range. Seven seats ran 19 scripts in a single session and returned one call for the day: chase the overdue invoice, with the founder sending it. The CFO seat reported 42,000 in cash and 22.8 weeks of runway. It showed that a 4,000-a-month hire keeps cash positive for all 13 weeks and caught two invoices that disagree between books and bank. The CRO seat matched a new US inquiry to an old Northwind deal lost on price instead of opening a duplicate. It then built a champion kit with three price options, an ROI of 1.75 and a payback of 4.36 months. The COO seat found 10 free hours and capped ad spend, and the CLO seat listed what a US client needs, from a DPA with SCC or DPF to sales-tax nexus.
 
 ### Human gate
 
-No script in the pack contains code that sends email, moves money or signs. Each agent drafts and stops, and every send, payment, signature or publish goes to a human queue where a named person accepts, edits or rejects it. A queue item that times out stays unapproved. Writing halt to the kill-switch file stops the morning brief, the daily digest, preflight and the n8n runs on their next call. Shadow metrics compare past drafts with what the human decided, which gives the founder a measured record of how far the agents can be trusted.
+No script in the pack contains code that sends email, moves money or signs. Every send, payment, signature or publish stops at a human queue, where a named person accepts, edits or rejects it, and an item that times out stays unapproved. Writing halt to the kill-switch file stops the morning brief, the daily digest, preflight and the n8n runs on their next call. A preflight check runs before work and refuses requests such as "just send it, I'll approve later" as a severity-one bypass. Shadow metrics compare past drafts with what the human decided, and only a human promotes a seat to more autonomy.
 
-### Preflight and cost
+### Tested on the buyer's machine
 
-The router tells the agent to check the kill switch before any job. One preflight call runs that check, pushes back on requests such as "just send it, I'll approve later" and picks a token route, with scripts first and cheaper model tiers next. No step may invent a send to save tokens. The scripts use only the Python 3 standard library and need no API key on the included example board.
+The pack tests itself on the buyer's machine. One command runs 105 evals, 447 scripted simulations and 8 golden cases, and checks 18 named doc claims against the code. 117 of the simulations are adversarial, such as prompt injection and "approve it later" pressure, and every one must fail closed for the gate to report PASS. The same command checks any local edit to a seat before that seat touches real work.
 
-### Tested
+### What is in the ZIP
 
-A self-eval gate ships inside the pack. It runs 105 evals, 447 scripted simulations and 8 golden cases, and checks 18 named doc claims against the code. 117 of the simulations are adversarial, such as prompt injection and "approve it later" pressure, and each one must fail closed for the gate to pass.
+The ZIP holds the 12 skills, 56 standard-library Python scripts, an example board with 10 workstreams and 10 human-queue items, three n8n workflows and the self-eval gate. It runs with Python 3.9 or later and bash, inside any agent that can read SKILL.md files and run python3. Setup takes three commands: bash scripts/boot-file-board.sh, a human_of_record name in the charter, then python3 scripts/ceo.py --board runtime/board. Read-only connectors cover ClickUp and Asana tasks, named Notion pages and a bank GET feed, and none of them writes back.
 
-### Connectors and limits
+### Limits
 
-Read-only connectors pull ClickUp and Asana tasks, named Notion pages and a bank GET feed once the operator adds tokens, and they never write back. Optional analyzer APIs (Jev, Cloudflare Clef or OpenAI Decisions) receive the question and the relevant board text only when the operator sets ANALYZER_BACKEND; left blank, every check runs in code. Three n8n workflows come in the box, and the inbound webhook needs header auth and validates every field before anything runs. Linear and Plane have a stub only, and the pack gives no legal, tax, accounting or payroll advice.
-
-### What is in the pack
-
-The pack holds 12 skills, 56 standard-library Python scripts, an example board with 10 workstreams and 10 human-queue items, three n8n workflows and the self-eval gate. The scripts import each other and read the example board, so they run from a local copy of the pack. Quick start: bash scripts/boot-file-board.sh, fill human_of_record in the charter, then python3 scripts/ceo.py --board runtime/board.
+The limits are stated up front. Linear and Plane have a stub only, and the three n8n workflows need the Execute Command node, which n8n Cloud does not offer and n8n 2.0 or later turns off by default. Optional analyzer APIs (Jev, Cloudflare Clef or OpenAI Decisions) receive board text only when the operator sets ANALYZER_BACKEND. The pack gives no legal, tax, accounting or payroll advice. The licence covers the purchaser's own business and forbids sharing or reselling the files.
 
 ## Quick start (after purchase)
 
@@ -144,4 +144,4 @@ More on n8n hosting (Cloud, self-hosted 2.0+, no n8n): [docs/n8n-hosting.md](doc
 
 ## Licence
 
-Documentation, screenshots and sample outputs © 2026 DesignUp Strategy AZ. You may link to and quote this documentation. The skill pack is licensed separately to buyers on Agensi; nothing here grants a licence to the pack.
+Documentation, screenshots and sample outputs © 2026 DesignUp Strategy AZ. You may link to and quote this documentation. The skill pack is licensed separately to each purchaser for use inside their own business; nothing here grants a licence to the pack.
