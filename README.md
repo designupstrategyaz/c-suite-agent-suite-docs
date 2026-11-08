@@ -6,8 +6,8 @@ Eleven executive seats plus a Studio OS router for agencies, B2B SaaS and consul
 
 This repository is the public documentation: what the pack does, real sample outputs, the FAQ and the limits. The skill pack itself (12 skills, scripts, example board) is sold as a one-time download on Gumroad and is not in this repository.
 
-- **Demo video, the full Monday session (2:17):** https://youtu.be/INcitKj0Q3o
-- **Short demo (63 s):** https://youtu.be/j7tq95SrUwk
+- **Demo video, the full Monday session (2:17):** https://youtu.be/WfrxVEWAZFg
+- **Short demo (63 s):** https://youtu.be/b9j-3HJJNUw
 - **Full session, seven seats on one Monday:** [docs/monday-session.md](docs/monday-session.md)
 - **Buy (Gumroad, $99 one-time, single-seat licence):** the link is added here when the product goes live.
 
