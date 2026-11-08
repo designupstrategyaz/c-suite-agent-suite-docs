@@ -149,4 +149,4 @@ More on n8n hosting (Cloud, self-hosted 2.0+, no n8n): [docs/n8n-hosting.md](doc
 
 ## Licence
 
-Documentation, screenshots and sample outputs © 2026 DesignUp Strategy AZ. You may link to and quote this documentation. The skill pack is sold under a single-seat licence (one named person; no sharing, reselling or hosting); nothing here grants a licence to the pack.
+Documentation, screenshots and sample outputs © 2026 DesignUp Strategy AZ. You may link to and quote this documentation. The skill pack is sold under a single-seat licence (one named person; no sharing, reselling or hosting); nothing here grants a licence to the pack. The licence is governed by the laws of Wyoming, USA.
