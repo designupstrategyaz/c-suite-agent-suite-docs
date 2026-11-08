@@ -1,0 +1,87 @@
+{
+  "ok": true,
+  "kind": "cpm_draft",
+  "gates": [],
+  "blocked": false,
+  "project_duration_days": 15.0,
+  "critical": [
+    "permit",
+    "demo",
+    "rough",
+    "inspect",
+    "finish"
+  ],
+  "activities": [
+    {
+      "id": "permit",
+      "name": "Permit / access",
+      "duration_days": 3.0,
+      "preds": [],
+      "es": 0.0,
+      "ef": 3.0,
+      "ls": 0.0,
+      "lf": 3.0,
+      "total_float": 0.0,
+      "critical": true
+    },
+    {
+      "id": "demo",
+      "name": "Demo / protect",
+      "duration_days": 2.0,
+      "preds": [
+        "permit"
+      ],
+      "es": 3.0,
+      "ef": 5.0,
+      "ls": 3.0,
+      "lf": 5.0,
+      "total_float": 0.0,
+      "critical": true
+    },
+    {
+      "id": "rough",
+      "name": "Rough-in",
+      "duration_days": 5.0,
+      "preds": [
+        "demo"
+      ],
+      "es": 5.0,
+      "ef": 10.0,
+      "ls": 5.0,
+      "lf": 10.0,
+      "total_float": 0.0,
+      "critical": true
+    },
+    {
+      "id": "inspect",
+      "name": "Rough inspect",
+      "duration_days": 1.0,
+      "preds": [
+        "rough"
+      ],
+      "es": 10.0,
+      "ef": 11.0,
+      "ls": 10.0,
+      "lf": 11.0,
+      "total_float": 0.0,
+      "critical": true
+    },
+    {
+      "id": "finish",
+      "name": "Finish / punch",
+      "duration_days": 4.0,
+      "preds": [
+        "inspect"
+      ],
+      "es": 11.0,
+      "ef": 15.0,
+      "ls": 11.0,
+      "lf": 15.0,
+      "total_float": 0.0,
+      "critical": true
+    }
+  ],
+  "committed": false,
+  "sent": false,
+  "rule": "CPM draft for the board. Not dispatch. Not Primavera. Human owns the live schedule."
+}

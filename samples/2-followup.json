@@ -1,0 +1,39 @@
+{
+  "ok": true,
+  "invoices": [
+    {
+      "invoice": "INV-1001",
+      "workstream": "WS-003",
+      "amount": 1190,
+      "due": "2026-10-01",
+      "status": "overdue",
+      "account": "acme.test",
+      "source": "GET",
+      "days_past": 38,
+      "stage": "day_30_escalate",
+      "send": false
+    }
+  ],
+  "proposals": [
+    {
+      "id": "WS-002",
+      "title": "Inbound: Acme landing-page refresh",
+      "reason": "inbound waiting on a human send",
+      "days": null
+    },
+    {
+      "id": "WS-007",
+      "title": "Proposal: Acme phase 2",
+      "reason": "proposal or last touch stale",
+      "days": 24
+    },
+    {
+      "id": "WS-009",
+      "title": "US inbound \u2014 Austin Studio one-job",
+      "reason": "inbound waiting on a human send",
+      "days": null
+    }
+  ],
+  "sent": false,
+  "queued": []
+}

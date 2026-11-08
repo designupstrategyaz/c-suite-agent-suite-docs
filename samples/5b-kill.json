@@ -1,0 +1,6 @@
+{
+  "halt": true,
+  "reason": "Emergency Stop is set",
+  "board": "examples/file-board",
+  "kill_switch": "runtime/kill-switch"
+}

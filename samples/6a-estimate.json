@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "kind": "estimate_draft",
+  "buckets": {
+    "labor": 4200.0,
+    "materials": 1800.0,
+    "equipment": 350.0,
+    "subcontract": 0.0,
+    "overhead": 635.0,
+    "contingency": 400.0,
+    "profit": 750.0
+  },
+  "direct_cost": 6350.0,
+  "total": 8135.0,
+  "missing_hard": [],
+  "gates": [],
+  "blocked": false,
+  "committed": false,
+  "signed": false,
+  "sent": false,
+  "rule": "Estimate is a draft build-up. Visible overhead/contingency/profit. Human signs the bid."
+}
