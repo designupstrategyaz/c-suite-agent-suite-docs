@@ -29,11 +29,15 @@ The pack tests itself on the buyer's machine. One command runs 105 evals, 447 sc
 
 ### What is in the ZIP
 
-The ZIP holds the 12 skills, 56 standard-library Python scripts, an example board with 10 workstreams and 10 human-queue items, three n8n workflows and the self-eval gate. It runs with Python 3.9 or later and bash, inside any agent that can read SKILL.md files and run python3. Setup takes three commands: bash scripts/boot-file-board.sh, a human_of_record name in the charter, then python3 scripts/ceo.py --board runtime/board. Read-only connectors cover ClickUp and Asana tasks, named Notion pages and a bank GET feed, and none of them writes back.
+The ZIP holds the 12 skills, 56 standard-library Python scripts, an example board with 10 workstreams and 10 human-queue items, six n8n workflows (three for the Execute Command node, three over SSH for n8n Cloud and n8n 2.0 or later) and the self-eval gate. It runs with Python 3.9 or later and bash, inside any agent that can read SKILL.md files and run python3. Setup takes three commands: bash scripts/boot-file-board.sh, a human_of_record name in the charter, then python3 scripts/ceo.py --board runtime/board. Read-only connectors cover ClickUp, Asana, Linear and Plane tasks, named Notion pages and a bank GET feed, and none of them writes back.
 
 ### Limits
 
-The limits are stated up front. Linear and Plane have a stub only, and the three n8n workflows need the Execute Command node, which n8n Cloud does not offer and n8n 2.0 or later turns off by default. Optional analyzer APIs (Jev, Cloudflare Clef or OpenAI Decisions) receive board text only when the operator sets ANALYZER_BACKEND. The pack gives no legal, tax, accounting or payroll advice. The licence is single-seat: one named person may use the pack, and sharing, reselling or hosting it for others is forbidden.
+The limits are stated up front. The pack gives no legal, tax, accounting or payroll advice, and it runs locally with Python 3.9 or later and bash on the buyer's own machine. The licence is single-seat: one named person may use the pack, and sharing, reselling or hosting it for others is forbidden.
+
+### Privacy
+
+Nothing leaves the machine by default. Connectors send read-only GET requests only to the tools the operator connects. An optional analyzer API (Jev, Cloudflare Clef or OpenAI Decisions) receives the question and the relevant board text only when the operator sets ANALYZER_BACKEND; left blank, every check runs in code.
 
 ## Quick start (after purchase)
 
@@ -135,11 +139,11 @@ Yes. python3 scripts/self-eval.py --board examples/file-board runs 105 evals, 44
 
 **Which tools does it connect to?**
 
-Read-only GET connectors cover ClickUp and Asana tasks, named Notion pages and a bank feed, and python3 scripts/get_live.py --live --sync overlays live tasks onto the board without writing back. n8n is optional and its three workflows need the Execute Command node. Linear and Plane are not supported yet; the stub says so instead of pretending.
+Read-only GET connectors cover ClickUp, Asana, Linear and Plane tasks, named Notion pages and a bank feed, and python3 scripts/get_live.py --live --sync overlays live tasks onto the board without writing back. The Linear connector refuses any GraphQL mutation before a request leaves the machine. n8n is optional: three workflows use the Execute Command node, and three SSH versions cover n8n Cloud and n8n 2.0 or later.
 
 ## Limits
 
-Linear and Plane have a stub only, with no client yet. The scripts need the whole pack on disk to run. The three n8n workflows call the Execute Command node, which n8n Cloud does not offer and n8n 2.0 or later turns off by default; shared/n8n.md covers the SSH-node and cron routes. The pack gives no legal, tax, accounting or payroll advice, and the wiring to n8n, ClickUp or a bank stays with the buyer.
+The scripts need the whole pack on disk to run. The SSH n8n workflows need a plan that offers n8n's SSH node and a machine that holds the unzipped pack; without n8n, the same commands run from cron or the buyer's agent. The pack gives no legal, tax, accounting or payroll advice, and the wiring to n8n, ClickUp, Linear, Plane or a bank stays with the buyer.
 
 More on n8n hosting (Cloud, self-hosted 2.0+, no n8n): [docs/n8n-hosting.md](docs/n8n-hosting.md).
 
