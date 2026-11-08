@@ -6,9 +6,10 @@ Eleven executive seats plus a Studio OS router for agencies, B2B SaaS and consul
 
 This repository is the public documentation: what the pack does, real sample outputs, the FAQ and the limits. The skill pack itself (12 skills, scripts, example board) is sold as a one-time download on Gumroad and is not in this repository.
 
-- **Demo video (63 s, real runs):** https://youtu.be/domzW8sVSCQ
+- **Demo video, the full Monday session (2:17):** https://youtu.be/g1EwVOhtf5U
+- **Short demo (63 s):** https://youtu.be/domzW8sVSCQ
 - **Full session, seven seats on one Monday:** [docs/monday-session.md](docs/monday-session.md)
-- **Buy (Gumroad, $50 one-time):** the link is added here when the product goes live.
+- **Buy (Gumroad, $99 one-time, single-seat licence):** the link is added here when the product goes live.
 
 ## What it does
 
@@ -16,7 +17,7 @@ C-Suite Agent Suite is a studio operating system for the buyer's own machine. It
 
 ### One Monday on the example board
 
-One Monday on the example board shows the range. Seven seats ran 19 scripts in a single session and returned one call for the day: chase the overdue invoice, with the founder sending it. The CFO seat reported 42,000 in cash and 22.8 weeks of runway. It showed that a 4,000-a-month hire keeps cash positive for all 13 weeks and caught two invoices that disagree between books and bank. The CRO seat matched a new US inquiry to an old Northwind deal lost on price instead of opening a duplicate. It then built a champion kit with three price options, an ROI of 1.75 and a payback of 4.36 months. The COO seat found 10 free hours and capped ad spend, and the CLO seat listed what a US client needs, from a DPA with SCC or DPF to sales-tax nexus.
+One Monday on the example board shows the range. Seven seats made 19 script runs in a single session and returned one call for the day: chase the overdue invoice, with the founder sending it. The CFO seat reported 42,000 in cash and 22.8 weeks of runway. It showed that a 4,000-a-month hire keeps cash positive for all 13 weeks and caught two invoices that disagree between books and bank. The CRO seat matched a new US inquiry to an old Northwind deal lost on price instead of opening a duplicate. It then built a champion kit with three price options, an ROI of 1.75 and a payback of 4.36 months. The COO seat found 10 free hours and capped ad spend, and the CLO seat listed what a US client needs, from a DPA with SCC or DPF to sales-tax nexus.
 
 ### Human gate
 
@@ -32,7 +33,7 @@ The ZIP holds the 12 skills, 56 standard-library Python scripts, an example boar
 
 ### Limits
 
-The limits are stated up front. Linear and Plane have a stub only, and the three n8n workflows need the Execute Command node, which n8n Cloud does not offer and n8n 2.0 or later turns off by default. Optional analyzer APIs (Jev, Cloudflare Clef or OpenAI Decisions) receive board text only when the operator sets ANALYZER_BACKEND. The pack gives no legal, tax, accounting or payroll advice. The licence covers the purchaser's own business and forbids sharing or reselling the files.
+The limits are stated up front. Linear and Plane have a stub only, and the three n8n workflows need the Execute Command node, which n8n Cloud does not offer and n8n 2.0 or later turns off by default. Optional analyzer APIs (Jev, Cloudflare Clef or OpenAI Decisions) receive board text only when the operator sets ANALYZER_BACKEND. The pack gives no legal, tax, accounting or payroll advice. The licence is single-seat: one named person may use the pack, and sharing, reselling or hosting it for others is forbidden.
 
 ## Quick start (after purchase)
 
@@ -144,4 +145,4 @@ More on n8n hosting (Cloud, self-hosted 2.0+, no n8n): [docs/n8n-hosting.md](doc
 
 ## Licence
 
-Documentation, screenshots and sample outputs © 2026 DesignUp Strategy AZ. You may link to and quote this documentation. The skill pack is licensed separately to each purchaser for use inside their own business; nothing here grants a licence to the pack.
+Documentation, screenshots and sample outputs © 2026 DesignUp Strategy AZ. You may link to and quote this documentation. The skill pack is sold under a single-seat licence (one named person; no sharing, reselling or hosting); nothing here grants a licence to the pack.
