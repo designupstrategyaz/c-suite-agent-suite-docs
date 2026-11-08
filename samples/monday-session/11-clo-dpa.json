@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "home": "EU",
+  "client": "US",
+  "cross_border": true,
+  "need": [
+    "DPA",
+    "SCC_or_DPF"
+  ],
+  "signed": false,
+  "ready_to_sign": false,
+  "note": "CLO drafts. CDaO confirms the path. Human signs. Pack is not counsel of record."
+}

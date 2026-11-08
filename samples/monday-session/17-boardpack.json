@@ -1,0 +1,451 @@
+{
+  "ok": true,
+  "kind": "board_pack",
+  "cash": {
+    "headline": 42000.0,
+    "runway_weeks": 22.8,
+    "dso_days": 64.8,
+    "ar_open": 2570.0,
+    "vs_forecast": -3000.0,
+    "vs_last_period": -6000.0
+  },
+  "thirteen_week": {
+    "first_negative_week": null,
+    "weekly_burn": 1841.2
+  },
+  "revenue": {
+    "ok": true,
+    "stages": {
+      "lead_generated": 3,
+      "in_progress": 2,
+      "lost": 1
+    },
+    "win_rate": 0.0,
+    "lost_reasons": {
+      "price": 1
+    },
+    "weighted_forecast": 2995.0,
+    "rows": [
+      {
+        "id": "WS-002",
+        "status": "lead_generated",
+        "revenue_impact": 4800.0,
+        "weight": 0.2,
+        "weighted": 960.0
+      },
+      {
+        "id": "WS-003",
+        "status": "in_progress",
+        "revenue_impact": 1190.0,
+        "weight": 0.5,
+        "weighted": 595.0
+      },
+      {
+        "id": "WS-007",
+        "status": "lead_generated",
+        "revenue_impact": 2200.0,
+        "weight": 0.2,
+        "weighted": 440.0
+      },
+      {
+        "id": "WS-008",
+        "status": "lost",
+        "revenue_impact": 3600.0,
+        "weight": 0.0,
+        "weighted": 0.0
+      },
+      {
+        "id": "WS-009",
+        "status": "lead_generated",
+        "revenue_impact": 0.0,
+        "weight": 0.2,
+        "weighted": 0.0
+      },
+      {
+        "id": "WS-010",
+        "status": "in_progress",
+        "revenue_impact": 2000.0,
+        "weight": 0.5,
+        "weighted": 1000.0
+      }
+    ],
+    "qualify": [
+      {
+        "id": "WS-002",
+        "fields": {
+          "problem": "landing page conversion",
+          "timing": null,
+          "budget": null,
+          "buyer": "Sam"
+        },
+        "missing": [
+          "timing",
+          "budget"
+        ]
+      },
+      {
+        "id": "WS-007",
+        "fields": {
+          "problem": null,
+          "timing": null,
+          "budget": null,
+          "buyer": "Sam"
+        },
+        "missing": [
+          "problem",
+          "timing",
+          "budget"
+        ]
+      },
+      {
+        "id": "WS-009",
+        "fields": {
+          "problem": null,
+          "timing": null,
+          "budget": null,
+          "buyer": "Pat"
+        },
+        "missing": [
+          "problem",
+          "timing",
+          "budget"
+        ]
+      }
+    ],
+    "cadence": "Monday pipeline. Friday: commit, board number, gap. Human owns the number.",
+    "sent": false,
+    "comp_plan": "human_only"
+  },
+  "gtm": {
+    "ok": true,
+    "diagnosis": "ICP is who already bought or is in pipeline \u2014 not who you wish would buy.",
+    "closed_won": 0,
+    "lost": 1,
+    "open_leads": 3,
+    "sources": {
+      "unknown": 6,
+      "site-form": 1,
+      "referral": 1,
+      "manual": 1,
+      "linkedin": 1
+    },
+    "icp_from_evidence": [
+      {
+        "company": "Acme",
+        "region": "EU",
+        "intent": "price"
+      },
+      {
+        "company": "Acme",
+        "region": "EU",
+        "intent": "price"
+      },
+      {
+        "company": "Austin Studio",
+        "region": "US",
+        "intent": "one-job cash brief"
+      }
+    ],
+    "positioning": {
+      "who": [
+        "Acme",
+        "Austin Studio"
+      ],
+      "outcome": "price",
+      "channel": "site-form",
+      "sentence": "For Acme, Austin Studio: price via site-form \u2014 not a spray.",
+      "locked": false,
+      "one_test": "One week on site-form"
+    },
+    "channel_rule": "Pick one channel where this ICP already appears. Do not spray.",
+    "campaigns_launched": 0,
+    "note": "Days 1\u201330 diagnose. Day 60: lock positioning. Human locks. Do not launch."
+  },
+  "capacity": {
+    "hours": 100,
+    "available_hours": 10,
+    "cap_cmo_spend": true
+  },
+  "vendors": {
+    "rows": [
+      {
+        "id": "credits",
+        "name": "Image credits",
+        "sla_hours": 24,
+        "monthly": 240,
+        "status": "ok",
+        "note": "Matches GET outflow. COO lists; CFO does not pay from here."
+      },
+      {
+        "id": "clickup",
+        "name": "ClickUp",
+        "sla_hours": 4,
+        "monthly": 0,
+        "status": "unwired",
+        "note": "Board is the file tree until CTO wires it. Do not start a second board."
+      },
+      {
+        "id": "asana",
+        "name": "Asana",
+        "sla_hours": 4,
+        "monthly": 0,
+        "status": "unwired",
+        "note": "GET project tasks only. Fixture books/asana.json until ASANA_TOKEN + ASANA_PROJECT_GID."
+      },
+      {
+        "id": "notion",
+        "name": "Notion",
+        "sla_hours": 4,
+        "monthly": 0,
+        "status": "unwired",
+        "note": "GET users/me + named pages. Database /query is POST \u2014 refused. Fixture books/notion.json."
+      },
+      {
+        "id": "n8n",
+        "name": "n8n",
+        "sla_hours": 4,
+        "monthly": 0,
+        "status": "unwired",
+        "note": "Import examples/n8n/*.json. Vault holds tokens. Do not POST money."
+      }
+    ],
+    "unwired": [
+      "clickup",
+      "asana",
+      "notion",
+      "n8n"
+    ],
+    "breached": [],
+    "note": "Day-60 COO: vendor/SLA list. Hygiene flags stay on the workstreams."
+  },
+  "scorecard": {
+    "ok": true,
+    "calibrate": {
+      "agree": 38,
+      "n": 38
+    },
+    "residency_violations": [],
+    "binding_act_misses": 0,
+    "binding_act_miss_rows": [],
+    "reflexion_n": 0,
+    "reflexion_candidates_n": 0,
+    "shadow": {
+      "decided_n": 7,
+      "pending_n": 4,
+      "accept_n": 2,
+      "edit_n": 3,
+      "reject_n": 2,
+      "accept_rate": 0.286,
+      "promote": false
+    },
+    "quality_ok": true,
+    "promote_request_ok": false,
+    "last_eval": null,
+    "last_eval_suite": {
+      "evals_pass": null,
+      "evals_fail": null,
+      "sims_pass": null,
+      "sims_fail": null,
+      "mutation_ok": false
+    },
+    "monthly_eval_due": true,
+    "promote": false,
+    "promote_eligible": false,
+    "has_suite": false,
+    "target": {
+      "residency": 0,
+      "binding_misses": 0,
+      "reeval_days": 30
+    },
+    "market": {
+      "home": "unknown",
+      "unknown_is_restrictive": true
+    },
+    "dpa": [
+      {
+        "ok": true,
+        "home": "unknown",
+        "client": "unknown",
+        "cross_border": true,
+        "need": [
+          "DPA",
+          "SCC_or_DPF_or_UK_IDTA",
+          "TIA"
+        ],
+        "signed": false,
+        "ready_to_sign": false,
+        "note": "CLO drafts. CDaO confirms the path. Human signs. Pack is not counsel of record."
+      },
+      {
+        "ok": true,
+        "home": "unknown",
+        "client": "EU",
+        "cross_border": true,
+        "need": [
+          "DPA",
+          "SCC_or_DPF_or_UK_IDTA",
+          "TIA"
+        ],
+        "signed": false,
+        "ready_to_sign": false,
+        "note": "CLO drafts. CDaO confirms the path. Human signs. Pack is not counsel of record."
+      },
+      {
+        "ok": true,
+        "home": "unknown",
+        "client": "US",
+        "cross_border": true,
+        "need": [
+          "DPA",
+          "SCC_or_DPF_or_UK_IDTA",
+          "TIA"
+        ],
+        "signed": false,
+        "ready_to_sign": false,
+        "note": "CLO drafts. CDaO confirms the path. Human signs. Pack is not counsel of record."
+      }
+    ],
+    "sent": false,
+    "paid": false,
+    "note": "Run scripts/self-eval.py. A fail stays at L1. promote_eligible needs green suites, Quality Pass, promote-request with isolated review, zero binding misses, fresh eval (<30d). Human still promotes. Reflexion candidates are advisory \u2014 COO weekly, never auto-applied."
+  },
+  "connectors": [
+    {
+      "job": "cash",
+      "wired": true,
+      "mode": "GET",
+      "path": "runtime/board/books/cash.json"
+    },
+    {
+      "job": "hours",
+      "wired": true,
+      "mode": "read",
+      "path": "runtime/board/books/capacity.json"
+    },
+    {
+      "job": "filings",
+      "wired": true,
+      "mode": "read",
+      "path": "runtime/board/books/compliance.json"
+    },
+    {
+      "job": "vendors",
+      "wired": true,
+      "mode": "read",
+      "path": "runtime/board/books/vendors.json"
+    },
+    {
+      "job": "bands",
+      "wired": true,
+      "mode": "read",
+      "path": "runtime/board/books/bands.json"
+    },
+    {
+      "job": "board",
+      "wired": true,
+      "mode": "read/write tasks",
+      "path": "runtime/board/workstreams"
+    },
+    {
+      "job": "kill",
+      "wired": true,
+      "mode": "poll",
+      "path": "runtime/kill-switch"
+    },
+    {
+      "job": "clickup_get",
+      "env_present": false,
+      "live_ok": false,
+      "fixture_ok": true,
+      "wired": true,
+      "mode": "GET",
+      "path": "runtime/board/books/clickup.json",
+      "source": "fixture"
+    },
+    {
+      "job": "asana_get",
+      "env_present": false,
+      "live_ok": false,
+      "fixture_ok": true,
+      "wired": true,
+      "mode": "GET",
+      "path": "runtime/board/books/asana.json",
+      "source": "fixture"
+    },
+    {
+      "job": "notion_get",
+      "env_present": false,
+      "live_ok": false,
+      "fixture_ok": true,
+      "wired": true,
+      "mode": "GET",
+      "path": "runtime/board/books/notion.json",
+      "source": "fixture",
+      "note": "users/me + pages only; database query POST refused"
+    },
+    {
+      "job": "bank_get",
+      "env_present": false,
+      "live_ok": false,
+      "fixture_ok": true,
+      "wired": true,
+      "mode": "GET",
+      "path": "runtime/board/books/cash.json",
+      "source": "fixture"
+    },
+    {
+      "job": "n8n",
+      "env_present": false,
+      "live_ok": false,
+      "wired": false,
+      "mode": "webhook_or_cron",
+      "path": "runtime/board/books/n8n.json",
+      "note": "N8N_BASE_URL is posture only \u2014 pack does not HTTP-call n8n"
+    }
+  ],
+  "risks": [
+    "overdue AR ['INV-1001']",
+    "open AR 2570.0",
+    "cash below forecast by 3000.0"
+  ],
+  "books_vs_bank": {
+    "get_invoices": [
+      "INV-0990",
+      "INV-1001"
+    ],
+    "board_invoices": [
+      "INV-1001",
+      "INV-2001"
+    ],
+    "only_get": [
+      "INV-0990"
+    ],
+    "only_board": [
+      "INV-2001"
+    ],
+    "note": "Day-30 CFO: books-vs-bank. GET wins. Do not invent the missing side."
+  },
+  "human_queue": 3,
+  "comments": [
+    "Queue a chase draft for INV-1001 \u2014 human sends",
+    "CMO spend capped",
+    "Comp, sign, and pay stay with the human."
+  ],
+  "decisions": [
+    {
+      "id": "hq-0001",
+      "created_at": "2026-10-31T00:00:00Z",
+      "role": "cro",
+      "kind": "client_send",
+      "summary": "Draft qualification reply to sam@acme.test \u2014 do not send",
+      "amount": 0,
+      "currency": "EUR",
+      "client_region": "EU",
+      "risk_class": "medium",
+      "artifact": "WS-002",
+      "sla_hours": 24,
+      "status": "waiting"
+    }
+  ],
+  "sent": false
+}

@@ -1,0 +1,41 @@
+{
+  "ok": true,
+  "kind": "preflight",
+  "halted": false,
+  "pushback": {
+    "ok": true,
+    "kind": "pushback",
+    "pushback": false,
+    "primary": null,
+    "hits": [],
+    "action": "continue",
+    "routed_seat": "studio-os",
+    "extracted": false,
+    "sent": false,
+    "paid": false,
+    "signed": false,
+    "published": false,
+    "promote": false,
+    "acted": false,
+    "rule": "Pushback is classify + refuse/re-route. Human still owns Binding-Acts."
+  },
+  "token": {
+    "ok": true,
+    "blocked": false,
+    "tier": "none",
+    "max_tokens": 0,
+    "reason": "ceo.py script",
+    "forward_failed_cot": false,
+    "invent_send": false,
+    "sent": false,
+    "acted": false,
+    "inflated": false
+  },
+  "blocked": false,
+  "next_action": "token_none",
+  "sent": false,
+  "paid": false,
+  "promote": false,
+  "acted": false,
+  "rule": "Kill \u2192 pushback \u2192 token. Binding-Acts stay false."
+}

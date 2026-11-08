@@ -1,0 +1,103 @@
+{
+  "ok": true,
+  "stages": {
+    "lead_generated": 3,
+    "in_progress": 2,
+    "lost": 1
+  },
+  "win_rate": 0.0,
+  "lost_reasons": {
+    "price": 1
+  },
+  "weighted_forecast": 2995.0,
+  "rows": [
+    {
+      "id": "WS-002",
+      "status": "lead_generated",
+      "revenue_impact": 4800.0,
+      "weight": 0.2,
+      "weighted": 960.0
+    },
+    {
+      "id": "WS-003",
+      "status": "in_progress",
+      "revenue_impact": 1190.0,
+      "weight": 0.5,
+      "weighted": 595.0
+    },
+    {
+      "id": "WS-007",
+      "status": "lead_generated",
+      "revenue_impact": 2200.0,
+      "weight": 0.2,
+      "weighted": 440.0
+    },
+    {
+      "id": "WS-008",
+      "status": "lost",
+      "revenue_impact": 3600.0,
+      "weight": 0.0,
+      "weighted": 0.0
+    },
+    {
+      "id": "WS-009",
+      "status": "lead_generated",
+      "revenue_impact": 0.0,
+      "weight": 0.2,
+      "weighted": 0.0
+    },
+    {
+      "id": "WS-010",
+      "status": "in_progress",
+      "revenue_impact": 2000.0,
+      "weight": 0.5,
+      "weighted": 1000.0
+    }
+  ],
+  "qualify": [
+    {
+      "id": "WS-002",
+      "fields": {
+        "problem": "landing page conversion",
+        "timing": null,
+        "budget": null,
+        "buyer": "Sam"
+      },
+      "missing": [
+        "timing",
+        "budget"
+      ]
+    },
+    {
+      "id": "WS-007",
+      "fields": {
+        "problem": null,
+        "timing": null,
+        "budget": null,
+        "buyer": "Sam"
+      },
+      "missing": [
+        "problem",
+        "timing",
+        "budget"
+      ]
+    },
+    {
+      "id": "WS-009",
+      "fields": {
+        "problem": null,
+        "timing": null,
+        "budget": null,
+        "buyer": "Pat"
+      },
+      "missing": [
+        "problem",
+        "timing",
+        "budget"
+      ]
+    }
+  ],
+  "cadence": "Monday pipeline. Friday: commit, board number, gap. Human owns the number.",
+  "sent": false,
+  "comp_plan": "human_only"
+}

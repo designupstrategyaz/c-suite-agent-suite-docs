@@ -1,0 +1,74 @@
+{
+  "id": "US",
+  "currency": "USD",
+  "tax_mode": "sales_tax_flag",
+  "invoice_need": [
+    "contact",
+    "legal_name",
+    "address",
+    "currency",
+    "tax",
+    "number"
+  ],
+  "invoice_note": "Do not invent a VAT ID. Flag nexus. Do not remit sales tax.",
+  "data_laws": [
+    "CCPA_CPRA_if_CA_or_unknown_consumer",
+    "state_privacy",
+    "COPPA_if_under_13",
+    "FTC_Act_unfair_deceptive",
+    "state_breach_notify_flag",
+    "CA_ADMT_if_triggered"
+  ],
+  "consent": {
+    "ads_pixel": "notice_and_opt_out",
+    "email": "CAN_SPAM",
+    "sms": "TCPA_consent_before_sms",
+    "cookies": "state_privacy_notice"
+  },
+  "email_need": [
+    "physical_address",
+    "unsubscribe",
+    "identity"
+  ],
+  "ads_flags": [
+    "CAN_SPAM",
+    "TCPA_no_sms_without_consent",
+    "FTC_no_income_guarantee",
+    "FTC_endorsement",
+    "five_flag"
+  ],
+  "transfer": [
+    "DPA",
+    "SCC_or_DPF"
+  ],
+  "employment": [
+    "at_will_varies_by_state",
+    "non_compete_flag_human",
+    "W9_or_W8"
+  ],
+  "consumer": [
+    "no_14_day_default"
+  ],
+  "children": [
+    "COPPA_if_under_13"
+  ],
+  "ai_flags": [
+    "FTC_deceptive_AI_claims",
+    "state_ADMT_if_triggered",
+    "CRSO_before_novel"
+  ],
+  "analyzer": "any_if_no_eu_uk_pii",
+  "analyzer_block": [],
+  "filings": [
+    "sales_tax_if_nexus",
+    "1099_if_US_contractor"
+  ],
+  "rail": "ACH",
+  "not_in_pack": [
+    "CPA of record",
+    "sales tax remittance",
+    "payroll"
+  ],
+  "signed": false,
+  "filed": false
+}

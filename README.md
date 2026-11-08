@@ -7,6 +7,7 @@ Eleven executive seats plus a Studio OS router for agencies, B2B SaaS and consul
 This repository is the public documentation: what the pack does, real sample outputs, the FAQ and the limits. The skill pack itself (12 skills, scripts, example board) is sold on Agensi and is not in this repository.
 
 - **Demo video (63 s, real runs):** https://youtu.be/domzW8sVSCQ
+- **Full session, seven seats on one Monday:** [docs/monday-session.md](docs/monday-session.md)
 - **Agensi listing:** the link is added here when the listing goes live.
 
 ## What it does

@@ -1,0 +1,101 @@
+{
+  "ok": true,
+  "opening": 42000.0,
+  "weekly_burn": 1841.2,
+  "weeks": [
+    {
+      "week": 0,
+      "start": "2026-11-08",
+      "receipts": 1190.0,
+      "burn": 1841.2,
+      "ending": 41348.8
+    },
+    {
+      "week": 1,
+      "start": null,
+      "receipts": 480.0,
+      "burn": 1841.2,
+      "ending": 39987.6
+    },
+    {
+      "week": 2,
+      "start": null,
+      "receipts": 0,
+      "burn": 1841.2,
+      "ending": 38146.4
+    },
+    {
+      "week": 3,
+      "start": null,
+      "receipts": 0,
+      "burn": 1841.2,
+      "ending": 36305.2
+    },
+    {
+      "week": 4,
+      "start": null,
+      "receipts": 0,
+      "burn": 1841.2,
+      "ending": 34464.0
+    },
+    {
+      "week": 5,
+      "start": null,
+      "receipts": 0,
+      "burn": 1841.2,
+      "ending": 32622.8
+    },
+    {
+      "week": 6,
+      "start": null,
+      "receipts": 0,
+      "burn": 1841.2,
+      "ending": 30781.6
+    },
+    {
+      "week": 7,
+      "start": null,
+      "receipts": 0,
+      "burn": 1841.2,
+      "ending": 28940.4
+    },
+    {
+      "week": 8,
+      "start": null,
+      "receipts": 0,
+      "burn": 1841.2,
+      "ending": 27099.2
+    },
+    {
+      "week": 9,
+      "start": null,
+      "receipts": 0,
+      "burn": 1841.2,
+      "ending": 25258.0
+    },
+    {
+      "week": 10,
+      "start": null,
+      "receipts": 0,
+      "burn": 1841.2,
+      "ending": 23416.8
+    },
+    {
+      "week": 11,
+      "start": null,
+      "receipts": 0,
+      "burn": 1841.2,
+      "ending": 21575.6
+    },
+    {
+      "week": 12,
+      "start": null,
+      "receipts": 0,
+      "burn": 1841.2,
+      "ending": 19734.4
+    }
+  ],
+  "first_negative_week": null,
+  "dso_days": 64.8,
+  "paid": false
+}

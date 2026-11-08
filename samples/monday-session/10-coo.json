@@ -1,0 +1,111 @@
+{
+  "ok": true,
+  "hours": 40.0,
+  "available_hours": 10.0,
+  "pipeline": 90,
+  "cap_cmo_spend": true,
+  "defer": [
+    {
+      "id": "WS-003",
+      "title": "Invoice draft Acme sprint 1",
+      "revenue_impact": 1190
+    },
+    {
+      "id": "WS-010",
+      "title": "Acme landing refresh \u2014 hours overage",
+      "revenue_impact": 2000
+    },
+    {
+      "id": "WS-007",
+      "title": "Proposal: Acme phase 2",
+      "revenue_impact": 2200
+    }
+  ],
+  "hygiene": [
+    {
+      "id": "WS-003",
+      "flag": "in_progress_no_deadline"
+    },
+    {
+      "id": "WS-004",
+      "flag": "in_progress_no_deadline"
+    },
+    {
+      "id": "WS-005",
+      "flag": "in_progress_no_deadline"
+    },
+    {
+      "id": "WS-010",
+      "flag": "in_progress_no_deadline"
+    }
+  ],
+  "vendors": {
+    "rows": [
+      {
+        "id": "credits",
+        "name": "Image credits",
+        "sla_hours": 24,
+        "monthly": 240,
+        "status": "ok",
+        "note": "Matches GET outflow. COO lists; CFO does not pay from here."
+      },
+      {
+        "id": "clickup",
+        "name": "ClickUp",
+        "sla_hours": 4,
+        "monthly": 0,
+        "status": "unwired",
+        "note": "Board is the file tree until CTO wires it. Do not start a second board."
+      },
+      {
+        "id": "asana",
+        "name": "Asana",
+        "sla_hours": 4,
+        "monthly": 0,
+        "status": "unwired",
+        "note": "GET project tasks only. Fixture books/asana.json until ASANA_TOKEN + ASANA_PROJECT_GID."
+      },
+      {
+        "id": "notion",
+        "name": "Notion",
+        "sla_hours": 4,
+        "monthly": 0,
+        "status": "unwired",
+        "note": "GET users/me + named pages. Database /query is POST \u2014 refused. Fixture books/notion.json."
+      },
+      {
+        "id": "n8n",
+        "name": "n8n",
+        "sla_hours": 4,
+        "monthly": 0,
+        "status": "unwired",
+        "note": "Import examples/n8n/*.json. Vault holds tokens. Do not POST money."
+      }
+    ],
+    "unwired": [
+      "clickup",
+      "asana",
+      "notion",
+      "n8n"
+    ],
+    "breached": [],
+    "note": "Day-60 COO: vendor/SLA list. Hygiene flags stay on the workstreams."
+  },
+  "blocked": null,
+  "invented": false,
+  "deleted": 0,
+  "answers": [
+    {
+      "id": "Q-CAP",
+      "type": "yesno",
+      "source": "code",
+      "winner": "yes",
+      "p": 0.99,
+      "all": {
+        "yes": 0.99,
+        "no": 0.01
+      },
+      "escalate": false
+    }
+  ]
+}

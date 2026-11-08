@@ -1,0 +1,139 @@
+{
+  "ok": true,
+  "as_of": "2026-10-31",
+  "currency": "EUR",
+  "source": "GET",
+  "headline": 42000.0,
+  "vs_forecast": -3000.0,
+  "vs_last_period": -6000.0,
+  "runway_months": 5.25,
+  "runway_weeks": 22.8,
+  "tax_set_aside": 297.5,
+  "tax_set_aside_pct": 0.25,
+  "dso_days": 64.8,
+  "ar_aging": {
+    "rows": [
+      {
+        "invoice": "INV-1001",
+        "workstream": "WS-003",
+        "amount": 1190,
+        "due": "2026-10-01",
+        "status": "overdue",
+        "account": "acme.test",
+        "bucket": "31-60",
+        "source": "GET"
+      },
+      {
+        "invoice": "INV-0990",
+        "workstream": null,
+        "amount": 480,
+        "due": "2026-11-15",
+        "status": "open",
+        "account": "other.test",
+        "bucket": "current",
+        "source": "GET"
+      },
+      {
+        "invoice": "INV-2001",
+        "workstream": "WS-009",
+        "amount": 900,
+        "due": null,
+        "status": "",
+        "bucket": "unknown",
+        "account": "austin.test",
+        "source": "board"
+      }
+    ],
+    "buckets": {
+      "current": 480.0,
+      "1-30": 0.0,
+      "31-60": 1190.0,
+      "61-90": 0.0,
+      "90+": 0.0,
+      "unknown": 900.0,
+      "paid": 0.0
+    },
+    "open": 2570.0
+  },
+  "anomaly": "out 240 credits",
+  "overdue": [
+    {
+      "invoice": "INV-1001",
+      "workstream": "WS-003",
+      "amount": 1190,
+      "due": "2026-10-01",
+      "status": "overdue",
+      "account": "acme.test",
+      "source": "GET"
+    }
+  ],
+  "next_action": "Queue a chase draft for INV-1001 \u2014 human sends",
+  "rpah": [
+    {
+      "id": "WS-002",
+      "title": "Inbound: Acme landing-page refresh",
+      "revenue_impact": 4800.0,
+      "rpah": 480.0,
+      "hours_used": 10.0,
+      "blocked": null
+    },
+    {
+      "id": "WS-008",
+      "title": "Lost: Northwind brochure site",
+      "revenue_impact": 3600.0,
+      "rpah": 360.0,
+      "hours_used": 10.0,
+      "blocked": null
+    },
+    {
+      "id": "WS-007",
+      "title": "Proposal: Acme phase 2",
+      "revenue_impact": 2200.0,
+      "rpah": 220.0,
+      "hours_used": 10.0,
+      "blocked": null
+    },
+    {
+      "id": "WS-010",
+      "title": "Acme landing refresh \u2014 hours overage",
+      "revenue_impact": 2000.0,
+      "rpah": 200.0,
+      "hours_used": 10.0,
+      "blocked": null
+    },
+    {
+      "id": "WS-003",
+      "title": "Invoice draft Acme sprint 1",
+      "revenue_impact": 1190.0,
+      "rpah": 119.0,
+      "hours_used": 10.0,
+      "blocked": null
+    }
+  ],
+  "blocked": [],
+  "bank_mode": "GET_ONLY",
+  "books_vs_bank": {
+    "get_invoices": [
+      "INV-0990",
+      "INV-1001"
+    ],
+    "board_invoices": [
+      "INV-1001",
+      "INV-2001"
+    ],
+    "only_get": [
+      "INV-0990"
+    ],
+    "only_board": [
+      "INV-2001"
+    ],
+    "note": "Day-30 CFO: books-vs-bank. GET wins. Do not invent the missing side."
+  },
+  "risks": [
+    "overdue AR ['INV-1001']",
+    "open AR 2570.0",
+    "cash below forecast by 3000.0"
+  ],
+  "paid": false,
+  "sent": false
+}

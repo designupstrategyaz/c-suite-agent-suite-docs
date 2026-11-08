@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "hires": 1,
+  "monthly_hire_cost": 4000.0,
+  "spend_cut": 0,
+  "base_runway_weeks": 22.8,
+  "base_first_negative_week": null,
+  "scenario_first_negative_week": null,
+  "stress_first_negative_week": null,
+  "committed": false,
+  "note": "Hiring plan through the model, not a wish list. Human decides."
+}

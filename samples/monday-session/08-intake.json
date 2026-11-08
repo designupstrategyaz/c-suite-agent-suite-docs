@@ -1,0 +1,57 @@
+{
+  "ok": true,
+  "action": "updated",
+  "workstream": "WS-008",
+  "human_queue": "hq-0002",
+  "needs_approval": true,
+  "sent": false,
+  "answers": [
+    {
+      "id": "Q-SEND",
+      "type": "yesno",
+      "source": "code",
+      "winner": "yes",
+      "p": 0.95,
+      "all": {
+        "yes": 0.95,
+        "no": 0.05
+      },
+      "escalate": false
+    },
+    {
+      "id": "Q-FIT",
+      "type": "choice",
+      "source": "code",
+      "winner": "price",
+      "p": 0.99,
+      "all": {
+        "price": 0.99
+      },
+      "escalate": false
+    },
+    {
+      "id": "Q-SCOPE",
+      "type": "yesno",
+      "source": "code",
+      "winner": "no",
+      "p": 0.02,
+      "all": {
+        "yes": 0.02,
+        "no": 0.98
+      },
+      "escalate": false
+    },
+    {
+      "id": "Q-DUP",
+      "type": "yesno",
+      "source": "code",
+      "winner": "yes",
+      "p": 0.99,
+      "all": {
+        "yes": 0.99,
+        "no": 0.01
+      },
+      "escalate": false
+    }
+  ]
+}

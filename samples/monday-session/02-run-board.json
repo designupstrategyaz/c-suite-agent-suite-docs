@@ -1,0 +1,832 @@
+{
+  "halt": false,
+  "board": "runtime/board",
+  "boot_ok": true,
+  "missing": [],
+  "cap_cmo_spend": true,
+  "pipeline": 90,
+  "hours": 100,
+  "available_hours": 10,
+  "ready_assets": [],
+  "blockers": [
+    {
+      "seat": "cco",
+      "why": "no workstream tagged ready_for_distribution"
+    }
+  ],
+  "human_queue_waiting": [
+    {
+      "id": "hq-0001",
+      "created_at": "2026-10-31T00:00:00Z",
+      "role": "cro",
+      "kind": "client_send",
+      "summary": "Draft qualification reply to sam@acme.test \u2014 do not send",
+      "amount": 0,
+      "currency": "EUR",
+      "client_region": "EU",
+      "risk_class": "medium",
+      "artifact": "WS-002",
+      "sla_hours": 24,
+      "status": "waiting"
+    },
+    {
+      "id": "hq-lived-003-pay-waiting",
+      "created_at": "2026-11-07T09:00:00Z",
+      "role": "cfo",
+      "kind": "pay",
+      "summary": "Draft contractor pay for Acme sprint support \u2014 waiting founder",
+      "agent_proposal": "Pay EUR 420 to contractor for WS-003 support hours from operating account.",
+      "status": "waiting",
+      "sent": false,
+      "paid": false,
+      "amount": 420,
+      "currency": "EUR",
+      "client_region": "EU",
+      "artifact": "WS-003",
+      "sla_hours": 24,
+      "note": "Lived pending: pay stays on HQ until named human approves. Timeout \u2260 pay."
+    }
+  ],
+  "brief": {
+    "billed": [
+      {
+        "id": "WS-002",
+        "title": "Inbound: Acme landing-page refresh",
+        "owner": "cro",
+        "revenue_impact": 4800.0,
+        "rpah": 480.0
+      },
+      {
+        "id": "WS-008",
+        "title": "Lost: Northwind brochure site",
+        "owner": "cro",
+        "revenue_impact": 3600.0,
+        "rpah": 360.0
+      },
+      {
+        "id": "WS-007",
+        "title": "Proposal: Acme phase 2",
+        "owner": "cro",
+        "revenue_impact": 2200.0,
+        "rpah": 220.0
+      }
+    ],
+    "blocked": {
+      "seat": "cco",
+      "why": "no workstream tagged ready_for_distribution"
+    },
+    "axis2": {
+      "id": "WS-005",
+      "title": "Studio capacity this week"
+    },
+    "human_decision": {
+      "id": "hq-0001",
+      "created_at": "2026-10-31T00:00:00Z",
+      "role": "cro",
+      "kind": "client_send",
+      "summary": "Draft qualification reply to sam@acme.test \u2014 do not send",
+      "amount": 0,
+      "currency": "EUR",
+      "client_region": "EU",
+      "risk_class": "medium",
+      "artifact": "WS-002",
+      "sla_hours": 24,
+      "status": "waiting"
+    },
+    "will_not": "Do not send, pay, sign, or add CMO spend \u2014 pipeline above 80% of hours",
+    "binding_act_misses": 0,
+    "quiet_clients": [
+      {
+        "id": "WS-002",
+        "title": "Inbound: Acme landing-page refresh",
+        "days": null,
+        "reason": "no last_client_touch"
+      },
+      {
+        "id": "WS-003",
+        "title": "Invoice draft Acme sprint 1",
+        "days": 49,
+        "reason": "quiet longer than usual"
+      },
+      {
+        "id": "WS-004",
+        "title": "Landing hero copy",
+        "days": null,
+        "reason": "no last_client_touch"
+      },
+      {
+        "id": "WS-006",
+        "title": "Landing hero copy (clean)",
+        "days": null,
+        "reason": "no last_client_touch"
+      },
+      {
+        "id": "WS-007",
+        "title": "Proposal: Acme phase 2",
+        "days": 24,
+        "reason": "quiet longer than usual"
+      },
+      {
+        "id": "WS-009",
+        "title": "US inbound \u2014 Austin Studio one-job",
+        "days": null,
+        "reason": "no last_client_touch"
+      },
+      {
+        "id": "WS-010",
+        "title": "Acme landing refresh \u2014 hours overage",
+        "days": 27,
+        "reason": "quiet longer than usual"
+      }
+    ],
+    "ar_buckets": {
+      "open": 2570.0,
+      "overdue": [
+        {
+          "invoice": "INV-1001",
+          "workstream": "WS-003",
+          "amount": 1190,
+          "due": "2026-10-01",
+          "status": "overdue",
+          "account": "acme.test",
+          "source": "GET"
+        }
+      ],
+      "buckets": {
+        "current": 480.0,
+        "1-30": 0.0,
+        "31-60": 1190.0,
+        "61-90": 0.0,
+        "90+": 0.0,
+        "unknown": 900.0,
+        "paid": 0.0
+      }
+    },
+    "board_tasks_n": 6,
+    "board_tasks_quiet": [
+      {
+        "id": "cu-007",
+        "workstream": "WS-007",
+        "provider": "clickup"
+      },
+      {
+        "id": "cu-003",
+        "workstream": "WS-003",
+        "provider": "clickup"
+      },
+      {
+        "id": "asana-007",
+        "workstream": "WS-007",
+        "provider": "asana"
+      },
+      {
+        "id": "asana-003",
+        "workstream": "WS-003",
+        "provider": "asana"
+      },
+      {
+        "id": "notion-007",
+        "workstream": "WS-007",
+        "provider": "notion"
+      },
+      {
+        "id": "notion-003",
+        "workstream": "WS-003",
+        "provider": "notion"
+      }
+    ],
+    "connectors": {
+      "clickup": "fixture",
+      "asana": "fixture",
+      "notion": "fixture",
+      "bank": "fixture",
+      "live": false
+    },
+    "sync_matched_n": 6,
+    "sync_unmatched_n": 0,
+    "promote_eligible": false,
+    "promote": false,
+    "shadow": {
+      "decided_n": 7,
+      "pending_n": 3,
+      "accept_n": 2,
+      "edit_n": 3,
+      "reject_n": 2,
+      "accept_rate": 0.286,
+      "edit_rate": 0.429,
+      "reject_rate": 0.286,
+      "promote": false
+    }
+  },
+  "judgments": [
+    {
+      "id": "WS-001",
+      "owner": "ceo",
+      "answers": [
+        {
+          "id": "Q-STOP",
+          "type": "yesno",
+          "source": "code",
+          "winner": "no",
+          "p": 0.0,
+          "all": {
+            "yes": 0.0,
+            "no": 1.0
+          },
+          "escalate": false
+        },
+        {
+          "id": "Q-ROUTE",
+          "type": "choice",
+          "source": "code",
+          "winner": "ceo",
+          "p": 0.99,
+          "all": {
+            "ceo": 0.99
+          },
+          "escalate": false
+        },
+        {
+          "id": "Q-SEND",
+          "type": "yesno",
+          "source": "code",
+          "winner": "no",
+          "p": 0.05,
+          "all": {
+            "yes": 0.05,
+            "no": 0.95
+          },
+          "escalate": false
+        },
+        {
+          "id": "Q-EXTRACT",
+          "type": "yesno",
+          "source": "code",
+          "winner": "no",
+          "p": 0.02,
+          "all": {
+            "yes": 0.02,
+            "no": 0.98
+          },
+          "escalate": false
+        },
+        {
+          "id": "Q-NOVEL",
+          "type": "yesno",
+          "source": "none",
+          "winner": "escalate",
+          "p": 0.0,
+          "all": {},
+          "escalate": true
+        }
+      ]
+    },
+    {
+      "id": "WS-002",
+      "owner": "cro",
+      "answers": [
+        {
+          "id": "Q-SEND",
+          "type": "yesno",
+          "source": "code",
+          "winner": "yes",
+          "p": 0.95,
+          "all": {
+            "yes": 0.95,
+            "no": 0.05
+          },
+          "escalate": false
+        },
+        {
+          "id": "Q-FIT",
+          "type": "choice",
+          "source": "code",
+          "winner": "price",
+          "p": 0.99,
+          "all": {
+            "price": 0.99
+          },
+          "escalate": false
+        },
+        {
+          "id": "Q-SCOPE",
+          "type": "yesno",
+          "source": "code",
+          "winner": "no",
+          "p": 0.02,
+          "all": {
+            "yes": 0.02,
+            "no": 0.98
+          },
+          "escalate": false
+        },
+        {
+          "id": "Q-DUP",
+          "type": "yesno",
+          "source": "code",
+          "winner": "yes",
+          "p": 0.99,
+          "all": {
+            "yes": 0.99,
+            "no": 0.01
+          },
+          "escalate": false
+        }
+      ]
+    },
+    {
+      "id": "WS-003",
+      "owner": "cfo",
+      "answers": [
+        {
+          "id": "Q-SEND",
+          "type": "yesno",
+          "source": "code",
+          "winner": "yes",
+          "p": 0.95,
+          "all": {
+            "yes": 0.95,
+            "no": 0.05
+          },
+          "escalate": false
+        },
+        {
+          "id": "Q-INV-READY",
+          "type": "yesno",
+          "source": "code",
+          "winner": "yes",
+          "p": 0.99,
+          "all": {
+            "yes": 0.99,
+            "no": 0.01
+          },
+          "escalate": false
+        },
+        {
+          "id": "Q-KILL",
+          "type": "yesno",
+          "source": "code",
+          "winner": "no",
+          "p": 0.02,
+          "all": {
+            "yes": 0.02,
+            "no": 0.98
+          },
+          "escalate": false
+        }
+      ]
+    },
+    {
+      "id": "WS-004",
+      "owner": "cco",
+      "answers": [
+        {
+          "id": "Q-READY",
+          "type": "yesno",
+          "source": "code",
+          "winner": "no",
+          "p": 0.02,
+          "all": {
+            "yes": 0.02,
+            "no": 0.98
+          },
+          "escalate": false
+        },
+        {
+          "id": "Q-AI-TELL",
+          "type": "yesno",
+          "source": "code",
+          "winner": "yes",
+          "p": 0.95,
+          "all": {
+            "yes": 0.95,
+            "no": 0.05
+          },
+          "escalate": false
+        },
+        {
+          "id": "Q-CLAIM",
+          "type": "yesno",
+          "source": "code",
+          "winner": "yes",
+          "p": 0.95,
+          "all": {
+            "yes": 0.95,
+            "no": 0.05
+          },
+          "escalate": false
+        },
+        {
+          "id": "Q-ASSET",
+          "type": "yesno",
+          "source": "code",
+          "winner": "no",
+          "p": 0.02,
+          "all": {
+            "yes": 0.02,
+            "no": 0.98
+          },
+          "escalate": false
+        }
+      ]
+    },
+    {
+      "id": "WS-005",
+      "owner": "coo",
+      "answers": [
+        {
+          "id": "Q-CAP",
+          "type": "yesno",
+          "source": "code",
+          "winner": "yes",
+          "p": 0.99,
+          "all": {
+            "yes": 0.99,
+            "no": 0.01
+          },
+          "escalate": false
+        }
+      ]
+    },
+    {
+      "id": "WS-006",
+      "owner": "cco",
+      "answers": [
+        {
+          "id": "Q-READY",
+          "type": "yesno",
+          "source": "code",
+          "winner": "yes",
+          "p": 0.99,
+          "all": {
+            "yes": 0.99,
+            "no": 0.01
+          },
+          "escalate": false
+        },
+        {
+          "id": "Q-AI-TELL",
+          "type": "yesno",
+          "source": "code",
+          "winner": "no",
+          "p": 0.02,
+          "all": {
+            "yes": 0.02,
+            "no": 0.98
+          },
+          "escalate": false
+        },
+        {
+          "id": "Q-CLAIM",
+          "type": "yesno",
+          "source": "code",
+          "winner": "no",
+          "p": 0.02,
+          "all": {
+            "yes": 0.02,
+            "no": 0.98
+          },
+          "escalate": false
+        },
+        {
+          "id": "Q-ASSET",
+          "type": "yesno",
+          "source": "code",
+          "winner": "no",
+          "p": 0.02,
+          "all": {
+            "yes": 0.02,
+            "no": 0.98
+          },
+          "escalate": false
+        }
+      ]
+    },
+    {
+      "id": "WS-007",
+      "owner": "cro",
+      "answers": [
+        {
+          "id": "Q-SEND",
+          "type": "yesno",
+          "source": "code",
+          "winner": "yes",
+          "p": 0.95,
+          "all": {
+            "yes": 0.95,
+            "no": 0.05
+          },
+          "escalate": false
+        },
+        {
+          "id": "Q-FIT",
+          "type": "choice",
+          "source": "code",
+          "winner": "price",
+          "p": 0.99,
+          "all": {
+            "price": 0.99
+          },
+          "escalate": false
+        },
+        {
+          "id": "Q-DUP",
+          "type": "yesno",
+          "source": "code",
+          "winner": "yes",
+          "p": 0.99,
+          "all": {
+            "yes": 0.99,
+            "no": 0.01
+          },
+          "escalate": false
+        },
+        {
+          "id": "Q-SCOPE",
+          "type": "yesno",
+          "source": "none",
+          "winner": "escalate",
+          "p": 0.0,
+          "all": {},
+          "escalate": true
+        }
+      ]
+    },
+    {
+      "id": "WS-008",
+      "owner": "cro",
+      "answers": [
+        {
+          "id": "Q-SEND",
+          "type": "yesno",
+          "source": "code",
+          "winner": "yes",
+          "p": 0.95,
+          "all": {
+            "yes": 0.95,
+            "no": 0.05
+          },
+          "escalate": false
+        },
+        {
+          "id": "Q-FIT",
+          "type": "choice",
+          "source": "code",
+          "winner": "price",
+          "p": 0.99,
+          "all": {
+            "price": 0.99
+          },
+          "escalate": false
+        },
+        {
+          "id": "Q-DUP",
+          "type": "yesno",
+          "source": "code",
+          "winner": "yes",
+          "p": 0.99,
+          "all": {
+            "yes": 0.99,
+            "no": 0.01
+          },
+          "escalate": false
+        },
+        {
+          "id": "Q-SCOPE",
+          "type": "yesno",
+          "source": "none",
+          "winner": "escalate",
+          "p": 0.0,
+          "all": {},
+          "escalate": true
+        }
+      ]
+    },
+    {
+      "id": "WS-009",
+      "owner": "cro",
+      "answers": [
+        {
+          "id": "Q-SEND",
+          "type": "yesno",
+          "source": "code",
+          "winner": "yes",
+          "p": 0.95,
+          "all": {
+            "yes": 0.95,
+            "no": 0.05
+          },
+          "escalate": false
+        },
+        {
+          "id": "Q-DUP",
+          "type": "yesno",
+          "source": "code",
+          "winner": "yes",
+          "p": 0.99,
+          "all": {
+            "yes": 0.99,
+            "no": 0.01
+          },
+          "escalate": false
+        },
+        {
+          "id": "Q-FIT",
+          "type": "choice",
+          "source": "none",
+          "winner": "escalate",
+          "p": 0.0,
+          "all": {},
+          "escalate": true
+        },
+        {
+          "id": "Q-SCOPE",
+          "type": "yesno",
+          "source": "none",
+          "winner": "escalate",
+          "p": 0.0,
+          "all": {},
+          "escalate": true
+        }
+      ]
+    },
+    {
+      "id": "WS-010",
+      "owner": "coo",
+      "answers": [
+        {
+          "id": "Q-CAP",
+          "type": "yesno",
+          "source": "code",
+          "winner": "yes",
+          "p": 0.99,
+          "all": {
+            "yes": 0.99,
+            "no": 0.01
+          },
+          "escalate": false
+        }
+      ]
+    }
+  ],
+  "cash": {
+    "ok": true,
+    "as_of": "2026-10-31",
+    "currency": "EUR",
+    "source": "GET",
+    "headline": 42000.0,
+    "vs_forecast": -3000.0,
+    "vs_last_period": -6000.0,
+    "runway_months": 5.25,
+    "runway_weeks": 22.8,
+    "tax_set_aside": 297.5,
+    "tax_set_aside_pct": 0.25,
+    "dso_days": 64.8,
+    "ar_aging": {
+      "rows": [
+        {
+          "invoice": "INV-1001",
+          "workstream": "WS-003",
+          "amount": 1190,
+          "due": "2026-10-01",
+          "status": "overdue",
+          "account": "acme.test",
+          "bucket": "31-60",
+          "source": "GET"
+        },
+        {
+          "invoice": "INV-0990",
+          "workstream": null,
+          "amount": 480,
+          "due": "2026-11-15",
+          "status": "open",
+          "account": "other.test",
+          "bucket": "current",
+          "source": "GET"
+        },
+        {
+          "invoice": "INV-2001",
+          "workstream": "WS-009",
+          "amount": 900,
+          "due": null,
+          "status": "",
+          "bucket": "unknown",
+          "account": "austin.test",
+          "source": "board"
+        }
+      ],
+      "buckets": {
+        "current": 480.0,
+        "1-30": 0.0,
+        "31-60": 1190.0,
+        "61-90": 0.0,
+        "90+": 0.0,
+        "unknown": 900.0,
+        "paid": 0.0
+      },
+      "open": 2570.0
+    },
+    "anomaly": "out 240 credits",
+    "overdue": [
+      {
+        "invoice": "INV-1001",
+        "workstream": "WS-003",
+        "amount": 1190,
+        "due": "2026-10-01",
+        "status": "overdue",
+        "account": "acme.test",
+        "source": "GET"
+      }
+    ],
+    "next_action": "Queue a chase draft for INV-1001 \u2014 human sends",
+    "rpah": [
+      {
+        "id": "WS-002",
+        "title": "Inbound: Acme landing-page refresh",
+        "revenue_impact": 4800.0,
+        "rpah": 480.0,
+        "hours_used": 10.0,
+        "blocked": null
+      },
+      {
+        "id": "WS-008",
+        "title": "Lost: Northwind brochure site",
+        "revenue_impact": 3600.0,
+        "rpah": 360.0,
+        "hours_used": 10.0,
+        "blocked": null
+      },
+      {
+        "id": "WS-007",
+        "title": "Proposal: Acme phase 2",
+        "revenue_impact": 2200.0,
+        "rpah": 220.0,
+        "hours_used": 10.0,
+        "blocked": null
+      },
+      {
+        "id": "WS-010",
+        "title": "Acme landing refresh \u2014 hours overage",
+        "revenue_impact": 2000.0,
+        "rpah": 200.0,
+        "hours_used": 10.0,
+        "blocked": null
+      },
+      {
+        "id": "WS-003",
+        "title": "Invoice draft Acme sprint 1",
+        "revenue_impact": 1190.0,
+        "rpah": 119.0,
+        "hours_used": 10.0,
+        "blocked": null
+      }
+    ],
+    "blocked": [],
+    "bank_mode": "GET_ONLY",
+    "books_vs_bank": {
+      "get_invoices": [
+        "INV-0990",
+        "INV-1001"
+      ],
+      "board_invoices": [
+        "INV-1001",
+        "INV-2001"
+      ],
+      "only_get": [
+        "INV-0990"
+      ],
+      "only_board": [
+        "INV-2001"
+      ],
+      "note": "Day-30 CFO: books-vs-bank. GET wins. Do not invent the missing side."
+    },
+    "risks": [
+      "overdue AR ['INV-1001']",
+      "open AR 2570.0",
+      "cash below forecast by 3000.0"
+    ],
+    "paid": false,
+    "sent": false
+  },
+  "shadow": {
+    "decided_n": 7,
+    "pending_n": 3,
+    "accept_n": 2,
+    "edit_n": 3,
+    "reject_n": 2,
+    "accept_rate": 0.286,
+    "edit_rate": 0.429,
+    "reject_rate": 0.286,
+    "promote": false
+  },
+  "binding_act_misses": 0,
+  "quiet_n": 7,
+  "board_tasks_n": 6,
+  "sync_matched_n": 6,
+  "live_get": false,
+  "promote_eligible": false,
+  "promote": false,
+  "sent": false,
+  "paid": false,
+  "signed": false
+}

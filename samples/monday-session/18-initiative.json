@@ -1,0 +1,19 @@
+{
+  "ok": false,
+  "kind": "initiative_charter",
+  "missing": [
+    "owner",
+    "outcome_metric",
+    "first_checkpoint",
+    "kill_criteria"
+  ],
+  "gates": [
+    "need_capacity_reserved",
+    "missing_charter_fields"
+  ],
+  "blocked": true,
+  "staffed": false,
+  "spent": false,
+  "committed": false,
+  "rule": "No charter \u2192 do not staff. Human names owner and kill criteria."
+}

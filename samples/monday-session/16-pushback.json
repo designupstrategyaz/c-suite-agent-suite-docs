@@ -1,0 +1,47 @@
+{
+  "ok": false,
+  "kind": "preflight",
+  "halted": false,
+  "pushback": {
+    "ok": true,
+    "kind": "pushback",
+    "pushback": true,
+    "primary": {
+      "class": "binding_bypass",
+      "action": "refuse_hq",
+      "severity": "SEV-1",
+      "pattern": "\\b(just send|send it now|approve later|i'll sign later|skip the queue)\\b"
+    },
+    "hits": [
+      {
+        "class": "binding_bypass",
+        "action": "refuse_hq",
+        "severity": "SEV-1",
+        "pattern": "\\b(just send|send it now|approve later|i'll sign later|skip the queue)\\b"
+      }
+    ],
+    "action": "refuse_hq",
+    "routed_seat": "studio-os",
+    "extracted": false,
+    "sent": false,
+    "paid": false,
+    "signed": false,
+    "published": false,
+    "promote": false,
+    "acted": false,
+    "rule": "Pushback is classify + refuse/re-route. Human still owns Binding-Acts."
+  },
+  "token": {
+    "tier": "none",
+    "reason": "no seat/job",
+    "sent": false,
+    "blocked": false
+  },
+  "blocked": true,
+  "next_action": "refuse_hq",
+  "sent": false,
+  "paid": false,
+  "promote": false,
+  "acted": false,
+  "rule": "Kill \u2192 pushback \u2192 token. Binding-Acts stay false."
+}

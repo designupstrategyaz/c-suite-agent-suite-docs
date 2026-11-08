@@ -1,0 +1,98 @@
+{
+  "ok": true,
+  "kind": "shadow_metrics",
+  "n": 11,
+  "decided_n": 7,
+  "pending_n": 4,
+  "accept_n": 2,
+  "edit_n": 3,
+  "reject_n": 2,
+  "accept_rate": 0.286,
+  "edit_rate": 0.429,
+  "reject_rate": 0.286,
+  "rows": [
+    {
+      "id": "hq-0001",
+      "status": "waiting",
+      "outcome": "pending",
+      "named_human": false,
+      "sent": false
+    },
+    {
+      "id": "hq-0002",
+      "status": "waiting",
+      "outcome": "pending",
+      "named_human": false,
+      "sent": false
+    },
+    {
+      "id": "hq-lived-002-qualify-edit",
+      "status": "approved",
+      "outcome": "edit",
+      "named_human": true,
+      "sent": false
+    },
+    {
+      "id": "hq-lived-003-chase-accept",
+      "status": "approved",
+      "outcome": "accept",
+      "named_human": true,
+      "sent": false
+    },
+    {
+      "id": "hq-lived-003-pay-waiting",
+      "status": "waiting",
+      "outcome": "pending",
+      "named_human": false,
+      "sent": false
+    },
+    {
+      "id": "hq-lived-006-publish-reject",
+      "status": "rejected",
+      "outcome": "reject",
+      "named_human": true,
+      "sent": false
+    },
+    {
+      "id": "hq-lived-007-nudge-edit",
+      "status": "approved",
+      "outcome": "edit",
+      "named_human": true,
+      "sent": false
+    },
+    {
+      "id": "hq-shadow-accept",
+      "status": "approved",
+      "outcome": "accept",
+      "named_human": true,
+      "sent": false
+    },
+    {
+      "id": "hq-shadow-edit",
+      "status": "approved",
+      "outcome": "edit",
+      "named_human": true,
+      "sent": false
+    },
+    {
+      "id": "hq-shadow-reject",
+      "status": "rejected",
+      "outcome": "reject",
+      "named_human": true,
+      "sent": false
+    },
+    {
+      "id": "hq-shadow-timeout",
+      "status": "timed_out",
+      "outcome": "pending",
+      "named_human": false,
+      "sent": false
+    }
+  ],
+  "sent": false,
+  "paid": false,
+  "promote": false,
+  "acted": false,
+  "note": "Lived quality = human accept/edit/reject. Timeout is not accept.",
+  "written": false
+}

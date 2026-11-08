@@ -1,0 +1,45 @@
+{
+  "ok": true,
+  "diagnosis": "ICP is who already bought or is in pipeline \u2014 not who you wish would buy.",
+  "closed_won": 0,
+  "lost": 1,
+  "open_leads": 3,
+  "sources": {
+    "unknown": 6,
+    "site-form": 1,
+    "referral": 1,
+    "manual": 1,
+    "linkedin": 1
+  },
+  "icp_from_evidence": [
+    {
+      "company": "Acme",
+      "region": "EU",
+      "intent": "price"
+    },
+    {
+      "company": "Acme",
+      "region": "EU",
+      "intent": "price"
+    },
+    {
+      "company": "Austin Studio",
+      "region": "US",
+      "intent": "one-job cash brief"
+    }
+  ],
+  "positioning": {
+    "who": [
+      "Acme",
+      "Austin Studio"
+    ],
+    "outcome": "price",
+    "channel": "site-form",
+    "sentence": "For Acme, Austin Studio: price via site-form \u2014 not a spray.",
+    "locked": false,
+    "one_test": "One week on site-form"
+  },
+  "channel_rule": "Pick one channel where this ICP already appears. Do not spray.",
+  "campaigns_launched": 0,
+  "note": "Days 1\u201330 diagnose. Day 60: lock positioning. Human locks. Do not launch."
+}

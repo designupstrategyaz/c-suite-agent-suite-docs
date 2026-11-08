@@ -1,0 +1,217 @@
+{
+  "ok": true,
+  "call": "Queue a chase draft for INV-1001 \u2014 human sends",
+  "memo": {
+    "call": "Queue a chase draft for INV-1001 \u2014 human sends",
+    "evidence": [
+      "overdue AR ['INV-1001']",
+      "runway_weeks=22.8",
+      "Q-CAP yes",
+      "stale ['WS-002', 'WS-007', 'WS-009']",
+      "quiet_clients=['WS-002', 'WS-003', 'WS-004', 'WS-006', 'WS-007']",
+      "AR overdue present",
+      "promote_eligible=False (human still promotes)",
+      "initiative_blocked=['need_capacity_reserved', 'missing_charter_fields']",
+      "shadow accept/edit/reject=2/3/2"
+    ],
+    "owner": "human",
+    "stop": "Do not send, pay, sign, or add CMO spend \u2014 pipeline above 80% of hours"
+  },
+  "cash": {
+    "headline": 42000.0,
+    "runway_weeks": 22.8,
+    "ar_open": 2570.0,
+    "overdue": [
+      "INV-1001"
+    ],
+    "next_action": "Queue a chase draft for INV-1001 \u2014 human sends",
+    "ar_buckets": {
+      "open": 2570.0,
+      "overdue": [
+        {
+          "invoice": "INV-1001",
+          "workstream": "WS-003",
+          "amount": 1190,
+          "due": "2026-10-01",
+          "status": "overdue",
+          "account": "acme.test",
+          "source": "GET"
+        }
+      ],
+      "buckets": {
+        "current": 480.0,
+        "1-30": 0.0,
+        "31-60": 1190.0,
+        "61-90": 0.0,
+        "90+": 0.0,
+        "unknown": 900.0,
+        "paid": 0.0
+      }
+    }
+  },
+  "billed": [
+    {
+      "id": "WS-002",
+      "title": "Inbound: Acme landing-page refresh",
+      "owner": "cro",
+      "revenue_impact": 4800.0,
+      "rpah": 480.0
+    },
+    {
+      "id": "WS-008",
+      "title": "Lost: Northwind brochure site",
+      "owner": "cro",
+      "revenue_impact": 3600.0,
+      "rpah": 360.0
+    },
+    {
+      "id": "WS-007",
+      "title": "Proposal: Acme phase 2",
+      "owner": "cro",
+      "revenue_impact": 2200.0,
+      "rpah": 220.0
+    }
+  ],
+  "blocked": {
+    "seat": "cco",
+    "why": "no workstream tagged ready_for_distribution"
+  },
+  "axis2": {
+    "id": "WS-005",
+    "title": "Studio capacity this week"
+  },
+  "binding_act_misses": 0,
+  "quiet_clients": [
+    {
+      "id": "WS-002",
+      "title": "Inbound: Acme landing-page refresh",
+      "days": null,
+      "reason": "no last_client_touch"
+    },
+    {
+      "id": "WS-003",
+      "title": "Invoice draft Acme sprint 1",
+      "days": 49,
+      "reason": "quiet longer than usual"
+    },
+    {
+      "id": "WS-004",
+      "title": "Landing hero copy",
+      "days": null,
+      "reason": "no last_client_touch"
+    },
+    {
+      "id": "WS-006",
+      "title": "Landing hero copy (clean)",
+      "days": null,
+      "reason": "no last_client_touch"
+    },
+    {
+      "id": "WS-007",
+      "title": "Proposal: Acme phase 2",
+      "days": 24,
+      "reason": "quiet longer than usual"
+    },
+    {
+      "id": "WS-009",
+      "title": "US inbound \u2014 Austin Studio one-job",
+      "days": null,
+      "reason": "no last_client_touch"
+    },
+    {
+      "id": "WS-010",
+      "title": "Acme landing refresh \u2014 hours overage",
+      "days": 27,
+      "reason": "quiet longer than usual"
+    }
+  ],
+  "ar_buckets": {
+    "open": 2570.0,
+    "overdue": [
+      {
+        "invoice": "INV-1001",
+        "workstream": "WS-003",
+        "amount": 1190,
+        "due": "2026-10-01",
+        "status": "overdue",
+        "account": "acme.test",
+        "source": "GET"
+      }
+    ],
+    "buckets": {
+      "current": 480.0,
+      "1-30": 0.0,
+      "31-60": 1190.0,
+      "61-90": 0.0,
+      "90+": 0.0,
+      "unknown": 900.0,
+      "paid": 0.0
+    }
+  },
+  "promote_eligible": false,
+  "promote": false,
+  "follow_up": {
+    "invoices": 1,
+    "stale_proposals": [
+      "WS-002",
+      "WS-007",
+      "WS-009"
+    ]
+  },
+  "already_handled": [
+    "CFO flagged overdue AR (draft chase only)",
+    "COO cap on CMO spend is on",
+    "CEO: blank/unowned initiative \u2014 do not staff"
+  ],
+  "human_decision": {
+    "id": "hq-0001",
+    "created_at": "2026-10-31T00:00:00Z",
+    "role": "cro",
+    "kind": "client_send",
+    "summary": "Draft qualification reply to sam@acme.test \u2014 do not send",
+    "amount": 0,
+    "currency": "EUR",
+    "client_region": "EU",
+    "risk_class": "medium",
+    "artifact": "WS-002",
+    "sla_hours": 24,
+    "status": "waiting"
+  },
+  "will_not": "Do not send, pay, sign, or add CMO spend \u2014 pipeline above 80% of hours",
+  "boot_ok": true,
+  "initiative": {
+    "ok": false,
+    "kind": "initiative_charter",
+    "missing": [
+      "owner",
+      "outcome_metric",
+      "first_checkpoint",
+      "kill_criteria"
+    ],
+    "gates": [
+      "need_capacity_reserved",
+      "missing_charter_fields"
+    ],
+    "blocked": true,
+    "staffed": false,
+    "spent": false,
+    "committed": false,
+    "rule": "No charter \u2192 do not staff. Human names owner and kill criteria."
+  },
+  "reflexion": {
+    "n": 0,
+    "recent": [],
+    "candidates_n": 0,
+    "promoted": false
+  },
+  "shadow": {
+    "decided_n": 7,
+    "pending_n": 3,
+    "accept_rate": 0.286,
+    "edit_rate": 0.429,
+    "reject_rate": 0.286,
+    "promote": false
+  },
+  "sent": false,
+  "paid": false
+}

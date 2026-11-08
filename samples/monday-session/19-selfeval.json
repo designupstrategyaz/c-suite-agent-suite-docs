@@ -1,0 +1,10 @@
+evals  105 pass / 0 fail  (n=105)
+sims   447 pass / 0 fail  (n=447)
+golden 8 pass / 0 fail  (n=8)
+seats  quota>=8  ok
+mutation  ok  (clean=0 dirty=6)
+gate_mut  ok  claims=ok(0)  refuse_mx=ok  quality=ok  token=ok  shadow=ok
+scorecard  board_ok=True  binding_misses=0  promote_eligible=False  promote=False  request_ok=False
+prove_promote  ok  eligible=False expected=False
+
+self-eval  PASS

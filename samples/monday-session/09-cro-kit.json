@@ -1,0 +1,96 @@
+{
+  "ok": true,
+  "workstream": "WS-007",
+  "account": "Acme",
+  "champion": "Sam",
+  "qualify_missing": [
+    "problem",
+    "timing",
+    "budget",
+    "buyer"
+  ],
+  "kit": {
+    "justification": {
+      "for": "Sam",
+      "account": "Acme",
+      "why_this": "landing page that books qualified slots \u2014 draft stays inside the published band.",
+      "why_now": "Workstream WS-007 is lead_generated. Late-stage acceleration, not a new-lead hunt.",
+      "ask": "A yes/no on the next step. Human sends."
+    },
+    "alternatives": [
+      {
+        "option": "do nothing",
+        "cost": "Keep the leak that opened this workstream."
+      },
+      {
+        "option": "status quo vendor",
+        "cost": "Same page, same miss. No new evidence."
+      },
+      {
+        "option": "this kit",
+        "cost": "Band on acme.test. Three options. Not one number."
+      }
+    ],
+    "value": {
+      "cost": 1200,
+      "return": 3300.0,
+      "roi": 1.75,
+      "payback_months": 4.36,
+      "best": 3960.0,
+      "base": 3300.0,
+      "worst": 2310.0,
+      "if_assumption_off": "If the key assumption is off by 30%, return is 2310.0",
+      "committed": false
+    },
+    "deck": {
+      "personalizable": true,
+      "slides": [
+        {
+          "n": 1,
+          "title": "The leak",
+          "note": "Proposal: Acme phase 2"
+        },
+        {
+          "n": 2,
+          "title": "Cost of inaction",
+          "note": "If the key assumption is off by 30%, return is 2310.0"
+        },
+        {
+          "n": 3,
+          "title": "New way",
+          "note": "landing page that books qualified slots"
+        },
+        {
+          "n": 4,
+          "title": "Three options",
+          "note": [
+            {
+              "tier": "good",
+              "amount": 800
+            },
+            {
+              "tier": "better",
+              "amount": 1400
+            },
+            {
+              "tier": "best",
+              "amount": 2200
+            }
+          ]
+        },
+        {
+          "n": 5,
+          "title": "Proof on the board",
+          "note": "WS-007"
+        },
+        {
+          "n": 6,
+          "title": "Ask",
+          "note": "A yes/no on the next step. Human sends."
+        }
+      ]
+    }
+  },
+  "sent": false,
+  "note": "Justification, alternatives, value calculator, personalizable deck. Human sends."
+}
