@@ -9,7 +9,7 @@ This repository is the public documentation: what the pack does, real sample out
 - **Demo video, the full Monday session (2:17):** https://youtu.be/WfrxVEWAZFg
 - **Short demo (63 s):** https://youtu.be/b9j-3HJJNUw
 - **Full session, seven seats on one Monday:** [docs/monday-session.md](docs/monday-session.md)
-- **Buy (Gumroad, $99 one-time, single-seat licence):** the link is added here when the product goes live.
+- **Buy (Gumroad, $99 one-time, single-seat licence):** https://designupstrategyaz.gumroad.com/l/c-suite-agent-suite
 
 ## What it does
 
