@@ -39,6 +39,20 @@ The limits are stated up front. The pack gives no legal, tax, accounting or payr
 
 Nothing leaves the machine by default. Connectors send read-only GET requests only to the tools the operator connects. An optional analyzer API (Jev, Cloudflare Clef or OpenAI Decisions) receives the question and the relevant board text only when the operator sets ANALYZER_BACKEND; left blank, every check runs in code.
 
+## How it compares
+
+- A chat assistant on its own answers from what you paste in, and an AI model can slip on arithmetic. Here the sums run as code, so every figure is calculated from your saved numbers.
+- A skill that is advice only gives the assistant frameworks to talk through. This pack also keeps your numbers, drafts the documents and stops every send for your approval.
+- A subscription agent suite is a recurring cost. This pack is one payment of $99, and it runs on your own computer.
+- Proof you can run yourself: one command runs 105 evals, 447 simulations and 8 golden cases on your computer.
+
+### Compared with a prompt-only skill
+
+- Compute: a prompt-only skill has the model do the arithmetic. Here 58 scripts compute cash, runway, forecasts and ROI, and typed questions return probabilities at zero model tokens.
+- State: a prompt-only skill keeps no state of its own. The board is plain JSON with an append-only JSONL ledger, so state survives sessions and diffs in git.
+- Enforcement: a prompt can ask the model to wait for approval, and a model can ignore a prompt. Here no script has a send or pay code path, and connectors are GET-only. A mutation sent to the Linear connector is refused before the request leaves.
+- Verification: the test suite is in the ZIP and runs with one command. Mutation checks confirm the gate catches a planted miss, and the adversarial simulations cover prompt injection.
+
 ## Quick start (after purchase)
 
 ```bash
