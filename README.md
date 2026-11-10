@@ -29,7 +29,7 @@ The pack tests itself on the buyer's machine. One command runs 105 evals, 447 sc
 
 ### What is in the ZIP
 
-The ZIP holds the 12 skills, 56 standard-library Python scripts, an example board with 10 workstreams and 10 human-queue items, six n8n workflows (three for the Execute Command node, three over SSH for n8n Cloud and n8n 2.0 or later) and the self-eval gate. It runs with Python 3.9 or later and bash, inside any agent that can read SKILL.md files and run python3. Setup takes three commands: bash scripts/boot-file-board.sh, a human_of_record name in the charter, then python3 scripts/ceo.py --board runtime/board. Read-only connectors cover ClickUp, Asana, Linear and Plane tasks, named Notion pages and a bank GET feed, and none of them writes back.
+The ZIP holds the 12 skills, 58 standard-library Python scripts, an example board with 10 workstreams and 10 human-queue items, six n8n workflows (three for the Execute Command node, three over SSH for n8n Cloud and n8n 2.0 or later) and the self-eval gate. It runs with Python 3.9 or later and bash, inside any agent that can read SKILL.md files and run python3. Setup takes three commands: bash scripts/boot-file-board.sh, a human_of_record name in the charter, then python3 scripts/ceo.py --board runtime/board. Read-only connectors cover ClickUp, Asana, Linear and Plane tasks, named Notion pages and a bank GET feed, and none of them writes back.
 
 ### Limits
 
