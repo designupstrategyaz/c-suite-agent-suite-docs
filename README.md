@@ -29,7 +29,7 @@ The pack tests itself on the buyer's machine. One command runs 105 evals, 447 sc
 
 ### What is in the ZIP
 
-The ZIP holds the 12 skills, 58 standard-library Python scripts, an example board with 10 workstreams and 10 human-queue items, six n8n workflows (three for the Execute Command node, three over SSH for n8n Cloud and n8n 2.0 or later) and the self-eval gate. It runs with Python 3.9 or later and bash, inside any agent that can read SKILL.md files and run python3. Setup takes three commands: bash scripts/boot-file-board.sh, a human_of_record name in the charter, then python3 scripts/ceo.py --board runtime/board. Read-only connectors cover ClickUp, Asana, Linear and Plane tasks, named Notion pages and a bank GET feed, and none of them writes back.
+The ZIP holds the 12 skills, 58 standard-library Python scripts, an example board with 10 workstreams and 10 human-queue items, six n8n workflows (three for the Execute Command node, three over SSH for n8n Cloud and n8n 2.0 or later) and the self-eval gate. It runs with Python 3.9 or later and bash, inside any agent that can read SKILL.md files and run python3. Setup takes three commands: bash scripts/boot-file-board.sh --blank for an empty board, python3 scripts/setup_board.py for your name and numbers, then python3 scripts/ceo.py --board runtime/board. Read-only connectors cover ClickUp, Asana, Linear and Plane tasks, named Notion pages and a bank GET feed, and none of them writes back.
 
 ### Limits
 
@@ -42,10 +42,12 @@ Nothing leaves the machine by default. Connectors send read-only GET requests on
 ## Quick start (after purchase)
 
 ```bash
-bash scripts/boot-file-board.sh                          # example board -> runtime/board, empty kill switch
-# fill human_of_record in runtime/board/CHARTER.md
-python3 scripts/ceo.py --board runtime/board             # one morning brief, nothing sent
-python3 scripts/self-eval.py --board examples/file-board # the pack's own test gate: PASS or FAIL
+bash scripts/install-skills.sh                            # link the 12 skills where Claude Code, Cursor and Codex look
+python3 scripts/ceo.py --board examples/file-board        # first brief on the demo board, nothing sent
+bash scripts/boot-file-board.sh --blank                   # your own empty board in runtime/board
+python3 scripts/setup_board.py                            # 7 questions: your name, cash, costs, hours, invoices
+python3 scripts/ceo.py --board runtime/board              # first brief on your own numbers
+python3 scripts/self-eval.py --board examples/file-board  # the pack's own test gate: PASS or FAIL
 ```
 
 Requirements: The scripts import each other and read the example board, so they run from a local copy of the pack. That copy needs python3 3.9 or later, bash for the boot script and a folder the agent can read and write. An agent that only loads the skills follows the seat instructions and returns the JSON artefact without running the scripts. Analyzer APIs and connector tokens are optional.
@@ -123,7 +125,7 @@ No key is needed. The scripts use the Python 3 standard library (3.9 or later) a
 
 **How do I try it before connecting my own systems?**
 
-Run scripts/boot-file-board.sh once. It copies the example board into runtime/board, creates an empty kill-switch file beside it and asks for a human_of_record name in CHARTER.md. The smoke test is python3 scripts/run_board.py --board runtime/board --kill-switch runtime/kill-switch, and every seat can run on the example data before any real system is connected.
+Run python3 scripts/ceo.py --board examples/file-board. The demo board ships with made-up clients, so every seat can run before any real system is connected. For your own studio, bash scripts/boot-file-board.sh --blank creates an empty board with an unset kill-switch file beside it, and python3 scripts/setup_board.py asks for your name and your numbers. A wrong board path stops with an error and the fix, so an empty answer never passes for a real one.
 
 **Does it work for a café, contractor or storefront?**
 
