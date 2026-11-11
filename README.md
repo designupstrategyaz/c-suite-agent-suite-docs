@@ -29,7 +29,7 @@ The pack tests itself on the buyer's machine. One command runs 105 evals, 447 sc
 
 ### What is in the ZIP
 
-The ZIP holds the 12 skills, 58 standard-library Python scripts, an example board with 10 workstreams and 10 human-queue items, six n8n workflows (three for the Execute Command node, three over SSH for n8n Cloud and n8n 2.0 or later) and the self-eval gate. It runs with Python 3.9 or later and bash, inside any agent that can read SKILL.md files and run python3. Setup takes three commands: bash scripts/boot-file-board.sh --blank for an empty board, python3 scripts/setup_board.py for your name and numbers, then python3 scripts/ceo.py --board runtime/board. Read-only connectors cover ClickUp, Asana, Linear and Plane tasks, named Notion pages and a bank GET feed, and none of them writes back.
+The ZIP holds the 12 skills, 60 standard-library Python scripts (16,568 lines), an example board with 10 workstreams and 10 human-queue items, six n8n workflows (three for the Execute Command node, three over SSH for n8n Cloud and n8n 2.0 or later) and the self-eval gate. It runs with Python 3.9 or later and bash, inside any agent that can read SKILL.md files and run python3. Setup takes three commands: bash scripts/boot-file-board.sh --blank for an empty board, python3 scripts/setup_board.py for your name and numbers, then python3 scripts/ceo.py --board runtime/board. Connectors read ClickUp, Asana, Linear and Plane tasks, named Notion pages and a bank GET feed. Writing to ClickUp or Asana is optional and off by default.
 
 ### Limits
 
@@ -37,7 +37,7 @@ The limits are stated up front. The pack gives no legal, tax, accounting or payr
 
 ### Privacy
 
-Nothing leaves the machine by default. Connectors send read-only GET requests only to the tools the operator connects. An optional analyzer API (Jev, Cloudflare Clef or OpenAI Decisions) receives the question and the relevant board text only when the operator sets ANALYZER_BACKEND; left blank, every check runs in code.
+Nothing leaves the machine by default. Connectors send read-only GET requests only to the tools the operator connects. Tracker write-back, if the operator switches it on, sends comments, status changes, due dates and new tasks only to the allowed ClickUp or Asana lists. An optional analyzer API (Jev, Cloudflare Clef or OpenAI Decisions) receives the question and the relevant board text only when the operator sets ANALYZER_BACKEND; left blank, every check runs in code.
 
 ## How it compares
 
@@ -48,9 +48,9 @@ Nothing leaves the machine by default. Connectors send read-only GET requests on
 
 ### Compared with a prompt-only skill
 
-- Compute: a prompt-only skill has the model do the arithmetic. Here 58 scripts compute cash, runway, forecasts and ROI, and typed questions return probabilities at zero model tokens.
+- Compute: a prompt-only skill has the model do the arithmetic. Here 60 scripts compute cash, runway, forecasts and ROI, and typed questions return probabilities at zero model tokens.
 - State: a prompt-only skill keeps no state of its own. The board is plain JSON with an append-only JSONL ledger, so state survives sessions and diffs in git.
-- Enforcement: a prompt can ask the model to wait for approval, and a model can ignore a prompt. Here no script has a send or pay code path, and connectors are GET-only. A mutation sent to the Linear connector is refused before the request leaves.
+- Enforcement: a prompt can ask the model to wait for approval, and a model can ignore a prompt. Here no script can send an email, move money or sign, and the readers are GET-only. Tracker writes sit in one script, behind rules that only a person at a terminal can set. A mutation sent to the Linear connector is refused before the request leaves.
 - Verification: the test suite is in the ZIP and runs with one command. Mutation checks confirm the gate catches a planted miss, and the adversarial simulations cover prompt injection.
 
 ## Quick start (after purchase)
@@ -155,7 +155,11 @@ Yes. python3 scripts/self-eval.py --board examples/file-board runs 105 evals, 44
 
 **Which tools does it connect to?**
 
-Read-only GET connectors cover ClickUp, Asana, Linear and Plane tasks, named Notion pages and a bank feed, and python3 scripts/get_live.py --live --sync overlays live tasks onto the board without writing back. The Linear connector refuses any GraphQL mutation before a request leaves the machine. n8n is optional: three workflows use the Execute Command node, and three SSH versions cover n8n Cloud and n8n 2.0 or later.
+Read-only GET connectors cover ClickUp, Asana, Linear and Plane tasks, named Notion pages and a bank feed, and python3 scripts/get_live.py --live --sync overlays live tasks onto the board without writing back. The Linear connector refuses any GraphQL mutation before a request leaves the machine. Writing to ClickUp or Asana is a separate script, covered in the next answer. n8n is optional: three workflows use the Execute Command node, and three SSH versions cover n8n Cloud and n8n 2.0 or later.
+
+**Can it update my tracker, or only read it?**
+
+It reads by default. If you want it to act, python3 scripts/tracker_write.py can add a comment, change a status, set a due date or create a task in ClickUp or Asana. It is off until you allow a list, at a terminal, and you choose the level per list and per kind of change: approve each write or batch yourself, or let named kinds of change go out on their own. One in ten automatic writes still waits for you. It works with an API token or through the assistant's own tracker connector. It never deletes, archives, assigns or moves a task. Tested live on ClickUp on 2026-11-11; Asana follows its API documentation and is untested live.
 
 ## Limits
 
